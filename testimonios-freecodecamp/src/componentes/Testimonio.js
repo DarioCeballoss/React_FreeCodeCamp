@@ -1,17 +1,18 @@
 import React from "react";
+import '../hojas-de-estilos/Testimonios.css';
 
 //EXPORTACION NOMBRADA - ventaja puede ser mas de uno
 // export function Testimonio() { 
 
 function Testimonio() { // EXPORTACION POR DEFECTO
   return (
-    <div>
-      <div className='contenedor-Testimonio'>
-        <img
-          className='imagen-testimonio'
-          src={require('../imagenes/testimonio-emma.png')}
-          alt='Foto de Emma' />
-      </div>
+    <div className='contenedor-testimonio'>
+
+      <img
+        className='imagen-testimonio'
+        src={require('../imagenes/testimonio-emma.png')}
+        alt='Foto de Emma' />
+
       <div className='contenedor-texto-testimonio'>
         <p className='nombre-testimonio'>Emma Bostain en Suecia</p>
         <p className='cargo-testimonio'>Ingeniera de Software en Spotify</p>
