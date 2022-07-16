@@ -2,15 +2,18 @@ import './App.css';
 import freeCodeCampLogo from './imagenes/freecodecamp-logo.png';
 import Boton from './componentes/Boton';
 import Contador from './componentes/Contador';
+import { useState } from 'react'; //hook
 
 function App() {
-//funcion
+const [numClics, setNumClics] = useState(0); // ojo
+
+//funcion flecha
 const manejarClic = () => {
-  console.log("Clic");
+  setNumClics(numClics+1);
 }
-//funcion ES6
+//funcion flecha ES6
 const reiniciarClic = () => {
-  console.log("reiniciar");
+setNumClics(0);
 }
 
 
@@ -24,7 +27,7 @@ const reiniciarClic = () => {
         />
       </div>
       <div className='contenedor-proncipal'>
-        <Contador  numClics='5' />
+        <Contador  numClics={numClics} />
         <Boton texto= 'Clic' esBotonDeClic={true} manejarClic={manejarClic} />
         <Boton texto= 'Reinicar' esBotonDeClic={false} manejarClic={reiniciarClic}/>
       </div>
