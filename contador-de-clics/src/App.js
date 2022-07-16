@@ -1,7 +1,6 @@
 import './App.css';
 import freeCodeCampLogo from './imagenes/freecodecamp-logo.png';
 import Boton from './componentes/Boton';
-import './estilos-css/Boton.css';
 import Contador from './componentes/Contador';
 
 function App() {
