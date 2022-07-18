@@ -1,8 +1,14 @@
 import React from "react";
+import '../hojas-de-estilos/Boton.css'
 
+function Boton(props) {
+    const esOperador = valor => {
+    return isNaN(valor) && (valor !== '.') &&  (valor !== '=');
+    };
 
-    return (
-        <div>
+    return(
+        <div 
+        className={`boton-contenedor ${esOperador(props.children)?'operador' : null}`.trimEnd()}>
             {props.children}
         </div>
 
