@@ -12,7 +12,12 @@ function App() {
     setInput(input + val);
   };
   const calcularResultado = () => {
-    setInput(evaluate(input));
+    if(input){
+      setInput(evaluate(input).toFixed(2));
+    }else{
+      alert("por favor ingrese valor a calcular");
+    }
+    
   };
 
   return (
