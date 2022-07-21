@@ -10,6 +10,7 @@ function App() {
         <img
           src={logofree}
           className='freecodecamp-logo'
+          alt='logo-frecodecamp'
         />
       </div>
       <div className='tareas-lista-principal'>
