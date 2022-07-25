@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TareaFormulario from './TareaFormulario'
-import Tarea from './Tarea'
-import '../estilos/ListaDeTareas.css'
+import TareaFormulario from './TareaFormulario';
+import Tarea from './Tarea';
+import '../estilos/ListaDeTareas.css';
 
 function ListaDeTareas() {
     const [tareas, setTareas] = useState([]);
@@ -13,23 +13,23 @@ function ListaDeTareas() {
             const tareasActualizadas = [tarea, ...tareas];
             setTareas(tareasActualizadas);
         }
-    }
+    };
 
     const eliminarTarea = id => {
         const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
         setTareas(tareasActualizadas);
-    }
+    };
 
     const completarTarea = id => {
         const tareasActualizadas = tareas.map(tarea => {
-            if (tarea.id == id) {
+            if (tarea.id === id) {
                 tarea.completada = !tarea.completada;
 
             }
             return tarea;
         });
         setTareas(tareasActualizadas);
-    }
+    };
 
     return (
         <>
